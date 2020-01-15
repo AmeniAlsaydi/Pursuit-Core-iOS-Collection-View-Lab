@@ -17,9 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a2o-vx-PIG">
-                                <rect key="frame" x="0.0" y="168" width="414" height="694"/>
+                                <rect key="frame" x="0.0" y="168" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0rk-Na-pGZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0X2-eZ-2oa"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0rk-Na-pGZ">
                                     <size key="itemSize" width="235" height="248"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -27,7 +30,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="countryCell" id="Ztu-Vm-RyH" customClass="CountryCell" customModule="CollectionViewLab" customModuleProvider="target">
-                                        <rect key="frame" x="89.5" y="0.0" width="235" height="248"/>
+                                        <rect key="frame" x="0.0" y="-74" width="235" height="248"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qge-T6-EvR">
                                             <rect key="frame" x="0.0" y="0.0" width="235" height="248"/>
@@ -36,8 +39,9 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wa2-gC-Shc">
                                                     <rect key="frame" x="0.0" y="0.0" width="235" height="248"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZI-Py-lK2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZI-Py-lK2">
                                                     <rect key="frame" x="8" y="217.5" width="219" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -45,12 +49,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Wa2-gC-Shc" secondAttribute="trailing" id="54w-w1-4V6"/>
-                                                <constraint firstAttribute="trailing" secondItem="hZI-Py-lK2" secondAttribute="trailing" constant="8" id="KUa-u4-mQy"/>
                                                 <constraint firstItem="Wa2-gC-Shc" firstAttribute="leading" secondItem="qge-T6-EvR" secondAttribute="leading" id="UBY-uc-XME"/>
                                                 <constraint firstItem="Wa2-gC-Shc" firstAttribute="top" secondItem="qge-T6-EvR" secondAttribute="top" id="WZG-tg-c4Y"/>
-                                                <constraint firstAttribute="bottom" secondItem="hZI-Py-lK2" secondAttribute="bottom" constant="10" id="XQ3-dh-cer"/>
                                                 <constraint firstAttribute="bottom" secondItem="Wa2-gC-Shc" secondAttribute="bottom" id="g0K-z8-HhC"/>
-                                                <constraint firstItem="hZI-Py-lK2" firstAttribute="leading" secondItem="qge-T6-EvR" secondAttribute="leading" constant="8" id="qHR-7j-zlF"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="235" height="248"/>
@@ -65,7 +66,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="a2o-vx-PIG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dbu-cD-dEq"/>
                             <constraint firstItem="a2o-vx-PIG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="R4J-v0-G01"/>
                             <constraint firstItem="a2o-vx-PIG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iB6-pJ-ZUo"/>
                             <constraint firstItem="a2o-vx-PIG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yFo-Zh-npy"/>
