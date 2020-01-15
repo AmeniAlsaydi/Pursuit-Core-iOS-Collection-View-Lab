@@ -10,7 +10,7 @@ import UIKit
 
 import ImageKit
 
-class CountryCollectionViewCell: UICollectionViewCell {
+class CountryCell: UICollectionViewCell {
     
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var countryNameLabel: UILabel!
@@ -18,12 +18,15 @@ class CountryCollectionViewCell: UICollectionViewCell {
     func configureCell(country: Country) {
         
         countryNameLabel.text = country.name
-        flagImageView.getImage(with: country.flag) { [weak self] (result) in
+        flagImageView.getImage(with: "https://www.countryflags.io/\(country.alpha2Code)/flat/64.png") { [weak self] (result) in
             switch result {
             case .failure(let appError):
                 print("error with getting flag: \(appError)")
             case .success(let image):
-                self?.flagImageView.image = image
+                DispatchQueue.main.async {
+                    self?.flagImageView.image = image
+                }
+                
             }
         }
     }

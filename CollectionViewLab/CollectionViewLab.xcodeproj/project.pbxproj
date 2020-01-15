@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		B7A88B4F23CEBCE800606436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B4E23CEBCE800606436 /* AppDelegate.swift */; };
 		B7A88B5123CEBCE800606436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B5023CEBCE800606436 /* SceneDelegate.swift */; };
-		B7A88B5323CEBCE800606436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B5223CEBCE800606436 /* ViewController.swift */; };
+		B7A88B5323CEBCE800606436 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B5223CEBCE800606436 /* CountryListViewController.swift */; };
 		B7A88B5623CEBCE800606436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A88B5423CEBCE800606436 /* Main.storyboard */; };
 		B7A88B5823CEBCEB00606436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A88B5723CEBCEB00606436 /* Assets.xcassets */; };
 		B7A88B5B23CEBCEB00606436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A88B5923CEBCEB00606436 /* LaunchScreen.storyboard */; };
-		B7A88B6323CF3A1700606436 /* CountryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6223CF3A1700606436 /* CountryCollectionViewCell.swift */; };
+		B7A88B6323CF3A1700606436 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6223CF3A1700606436 /* CountryCell.swift */; };
 		B7A88B6523CF3AF900606436 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6423CF3AF900606436 /* Country.swift */; };
 		B7A88B6823CF3BBF00606436 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7A88B6723CF3BBF00606436 /* ImageKit */; };
 		B7A88B6A23CF3CF600606436 /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */; };
@@ -23,12 +23,12 @@
 		B7A88B4B23CEBCE800606436 /* CollectionViewLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A88B4E23CEBCE800606436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A88B5023CEBCE800606436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7A88B5223CEBCE800606436 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7A88B5223CEBCE800606436 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
 		B7A88B5523CEBCE800606436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7A88B5723CEBCEB00606436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A88B5A23CEBCEB00606436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7A88B5C23CEBCEB00606436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7A88B6223CF3A1700606436 /* CountryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7A88B6223CF3A1700606436 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		B7A88B6423CF3AF900606436 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,11 +66,11 @@
 			children = (
 				B7A88B4E23CEBCE800606436 /* AppDelegate.swift */,
 				B7A88B5023CEBCE800606436 /* SceneDelegate.swift */,
-				B7A88B5223CEBCE800606436 /* ViewController.swift */,
+				B7A88B5223CEBCE800606436 /* CountryListViewController.swift */,
 				B7A88B5423CEBCE800606436 /* Main.storyboard */,
 				B7A88B6423CF3AF900606436 /* Country.swift */,
 				B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */,
-				B7A88B6223CF3A1700606436 /* CountryCollectionViewCell.swift */,
+				B7A88B6223CF3A1700606436 /* CountryCell.swift */,
 				B7A88B5723CEBCEB00606436 /* Assets.xcassets */,
 				B7A88B5923CEBCEB00606436 /* LaunchScreen.storyboard */,
 				B7A88B5C23CEBCEB00606436 /* Info.plist */,
@@ -155,8 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A88B5323CEBCE800606436 /* ViewController.swift in Sources */,
-				B7A88B6323CF3A1700606436 /* CountryCollectionViewCell.swift in Sources */,
+				B7A88B5323CEBCE800606436 /* CountryListViewController.swift in Sources */,
+				B7A88B6323CF3A1700606436 /* CountryCell.swift in Sources */,
 				B7A88B6A23CF3CF600606436 /* CountryAPIClient.swift in Sources */,
 				B7A88B4F23CEBCE800606436 /* AppDelegate.swift in Sources */,
 				B7A88B6523CF3AF900606436 /* Country.swift in Sources */,
