@@ -17,6 +17,7 @@
 		B7A88B6523CF3AF900606436 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6423CF3AF900606436 /* Country.swift */; };
 		B7A88B6823CF3BBF00606436 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = B7A88B6723CF3BBF00606436 /* ImageKit */; };
 		B7A88B6A23CF3CF600606436 /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */; };
+		B7A88B6C23D0038D00606436 /* CountryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6B23D0038D00606436 /* CountryDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B7A88B6223CF3A1700606436 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		B7A88B6423CF3AF900606436 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
+		B7A88B6B23D0038D00606436 /* CountryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				B7A88B4E23CEBCE800606436 /* AppDelegate.swift */,
 				B7A88B5023CEBCE800606436 /* SceneDelegate.swift */,
 				B7A88B5223CEBCE800606436 /* CountryListViewController.swift */,
+				B7A88B6B23D0038D00606436 /* CountryDetailController.swift */,
 				B7A88B5423CEBCE800606436 /* Main.storyboard */,
 				B7A88B6423CF3AF900606436 /* Country.swift */,
 				B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */,
@@ -160,6 +163,7 @@
 				B7A88B6A23CF3CF600606436 /* CountryAPIClient.swift in Sources */,
 				B7A88B4F23CEBCE800606436 /* AppDelegate.swift in Sources */,
 				B7A88B6523CF3AF900606436 /* Country.swift in Sources */,
+				B7A88B6C23D0038D00606436 /* CountryDetailController.swift in Sources */,
 				B7A88B5123CEBCE800606436 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
