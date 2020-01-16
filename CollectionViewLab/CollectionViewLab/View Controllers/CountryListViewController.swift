@@ -12,6 +12,7 @@ class CountryListViewController: UIViewController {
 
     @IBOutlet weak var largeFlageImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var countryNameLabel: UILabel!
     
     var countries = [Country]() {
         didSet {
@@ -47,6 +48,10 @@ class CountryListViewController: UIViewController {
                 self.countries = countries
             }
         }
+        
+    }
+    
+    func displayLargeFlag() {
         
     }
 

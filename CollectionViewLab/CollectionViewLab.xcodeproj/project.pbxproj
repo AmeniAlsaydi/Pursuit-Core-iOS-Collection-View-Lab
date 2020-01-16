@@ -72,6 +72,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B70A5FA623D092DD0077CAEB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7A88B5223CEBCE800606436 /* CountryListViewController.swift */,
+				B7A88B6B23D0038D00606436 /* CountryDetailController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B70A5FA723D092F50077CAEB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B7A88B6F23D0203D00606436 /* RatesAPIClient.swift */,
+				B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B70A5FA823D0930B0077CAEB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7A88B6423CF3AF900606436 /* Country.swift */,
+				B7A88B6D23D01A5100606436 /* ExchangeRate.swift */,
+				B7A88B6223CF3A1700606436 /* CountryCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B7A88B4223CEBCE800606436 = {
 			isa = PBXGroup;
 			children = (
@@ -95,14 +123,10 @@
 			children = (
 				B7A88B4E23CEBCE800606436 /* AppDelegate.swift */,
 				B7A88B5023CEBCE800606436 /* SceneDelegate.swift */,
-				B7A88B5223CEBCE800606436 /* CountryListViewController.swift */,
-				B7A88B6B23D0038D00606436 /* CountryDetailController.swift */,
-				B7A88B6F23D0203D00606436 /* RatesAPIClient.swift */,
 				B7A88B5423CEBCE800606436 /* Main.storyboard */,
-				B7A88B6423CF3AF900606436 /* Country.swift */,
-				B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */,
-				B7A88B6223CF3A1700606436 /* CountryCell.swift */,
-				B7A88B6D23D01A5100606436 /* ExchangeRate.swift */,
+				B70A5FA623D092DD0077CAEB /* View Controllers */,
+				B70A5FA723D092F50077CAEB /* Network */,
+				B70A5FA823D0930B0077CAEB /* Models */,
 				B7A88B5723CEBCEB00606436 /* Assets.xcassets */,
 				B7A88B5923CEBCEB00606436 /* LaunchScreen.storyboard */,
 				B7A88B5C23CEBCEB00606436 /* Info.plist */,

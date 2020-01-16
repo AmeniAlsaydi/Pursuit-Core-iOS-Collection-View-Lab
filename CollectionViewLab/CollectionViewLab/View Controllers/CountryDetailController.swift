@@ -17,12 +17,6 @@ class CountryDetailController: UIViewController {
         @IBOutlet weak var exchangeLabel: UILabel!
         
         var country: Country?
-//    var exchange: ExchangeRate? {
-//        didSet {
-//            updateUI()
-//        }
-//    }
-        
         
         override func viewDidLoad() {
             super.viewDidLoad()

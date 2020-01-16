@@ -38,8 +38,8 @@ class CollectionViewLabTests: XCTestCase {
 
     func testRatesApiClient() {
         // arrange
-        // let code = "AED"
-        let expectedCount = 169 //4.096766
+        let code = "AED"
+        let expectedRate = 4.099753
         let exp = XCTestExpectation(description: "rates found")
         
         // act
@@ -49,11 +49,11 @@ class CollectionViewLabTests: XCTestCase {
             case .failure(let appError):
                 XCTFail("appError: \(appError)")
             case .success(let rate):
-                let exchangeRates = rate.rates
+                let exchangeRate = rate.rates[code] ?? 0
                 
                  // assert
                 
-                XCTAssertEqual(exchangeRates.count , expectedCount)
+                XCTAssertEqual(exchangeRate , expectedRate)
                 exp.fulfill()
                 
             }
