@@ -16,63 +16,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a2o-vx-PIG">
-                                <rect key="frame" x="0.0" y="544" width="414" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0rk-Na-pGZ">
-                                    <size key="itemSize" width="235" height="211"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="countryCell" id="Ztu-Vm-RyH" customClass="CountryCell" customModule="CollectionViewLab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-18.5" width="235" height="211"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qge-T6-EvR">
-                                            <rect key="frame" x="0.0" y="0.0" width="235" height="211"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wa2-gC-Shc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="235" height="211"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZI-Py-lK2">
-                                                    <rect key="frame" x="8" y="153" width="219" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Wa2-gC-Shc" secondAttribute="trailing" id="54w-w1-4V6"/>
-                                                <constraint firstItem="Wa2-gC-Shc" firstAttribute="leading" secondItem="qge-T6-EvR" secondAttribute="leading" id="UBY-uc-XME"/>
-                                                <constraint firstItem="Wa2-gC-Shc" firstAttribute="top" secondItem="qge-T6-EvR" secondAttribute="top" id="WZG-tg-c4Y"/>
-                                                <constraint firstAttribute="bottom" secondItem="Wa2-gC-Shc" secondAttribute="bottom" id="g0K-z8-HhC"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="235" height="211"/>
-                                        <connections>
-                                            <outlet property="countryNameLabel" destination="hZI-Py-lK2" id="u0N-o9-eyG"/>
-                                            <outlet property="flagImageView" destination="Wa2-gC-Shc" id="ZtR-WY-P0M"/>
-                                            <segue destination="4gH-2f-zHt" kind="presentation" id="Wbz-2D-X6n"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.split.1x2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OJy-c2-HnH">
                                 <rect key="frame" x="20" y="161" width="374" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UeB-bV-EGj">
+                                <rect key="frame" x="0.0" y="532" width="414" height="230"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="FXa-Pe-FmS"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="175-7S-0Z7">
+                                    <size key="itemSize" width="224" height="234"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="countryCell" id="tgy-GN-DnY" customClass="CountryCell" customModule="CollectionViewLab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-2" width="224" height="234"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hL6-eh-ccJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="234"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-op-uSE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="117"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-HS-f8L">
+                                                    <rect key="frame" x="8" y="125" width="208" height="16"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Capital" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvE-Vl-gTO">
+                                                    <rect key="frame" x="8" y="149" width="208" height="13.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Population" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxy-cW-EvJ">
+                                                    <rect key="frame" x="8" y="170.5" width="208" height="13.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="SuI-HS-f8L" secondAttribute="trailing" constant="8" id="DEs-bA-Rsx"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nxy-cW-EvJ" secondAttribute="trailing" constant="8" id="FSC-sU-f90"/>
+                                                <constraint firstItem="fg8-op-uSE" firstAttribute="top" secondItem="hL6-eh-ccJ" secondAttribute="top" id="LXD-K8-PP2"/>
+                                                <constraint firstItem="Nxy-cW-EvJ" firstAttribute="top" secondItem="QvE-Vl-gTO" secondAttribute="bottom" constant="8" id="Pch-EC-yZl"/>
+                                                <constraint firstItem="fg8-op-uSE" firstAttribute="leading" secondItem="hL6-eh-ccJ" secondAttribute="leading" id="SWR-4C-ZRX"/>
+                                                <constraint firstItem="fg8-op-uSE" firstAttribute="height" secondItem="hL6-eh-ccJ" secondAttribute="height" multiplier="0.5" id="T6S-Z1-9tQ"/>
+                                                <constraint firstItem="SuI-HS-f8L" firstAttribute="top" secondItem="fg8-op-uSE" secondAttribute="bottom" constant="8" id="cNm-I1-RdW"/>
+                                                <constraint firstItem="Nxy-cW-EvJ" firstAttribute="leading" secondItem="hL6-eh-ccJ" secondAttribute="leading" constant="8" id="e9s-ec-x8H"/>
+                                                <constraint firstAttribute="trailing" secondItem="fg8-op-uSE" secondAttribute="trailing" id="edR-qX-gwm"/>
+                                                <constraint firstItem="SuI-HS-f8L" firstAttribute="leading" secondItem="hL6-eh-ccJ" secondAttribute="leading" constant="8" id="fEG-hY-qAi"/>
+                                                <constraint firstItem="QvE-Vl-gTO" firstAttribute="leading" secondItem="hL6-eh-ccJ" secondAttribute="leading" constant="8" id="gRc-ix-isf"/>
+                                                <constraint firstItem="QvE-Vl-gTO" firstAttribute="top" secondItem="SuI-HS-f8L" secondAttribute="bottom" constant="8" id="ilt-je-Idu"/>
+                                                <constraint firstAttribute="trailing" secondItem="QvE-Vl-gTO" secondAttribute="trailing" constant="8" id="mX3-Ch-BY4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="224" height="234"/>
+                                        <connections>
+                                            <outlet property="capitalLabel" destination="QvE-Vl-gTO" id="fuN-5r-A0M"/>
+                                            <outlet property="countryNameLabel" destination="SuI-HS-f8L" id="vd9-Et-v3U"/>
+                                            <outlet property="flagImageView" destination="fg8-op-uSE" id="Bha-0o-FZ5"/>
+                                            <outlet property="populationLabel" destination="Nxy-cW-EvJ" id="WFO-sl-fU0"/>
+                                            <segue destination="4gH-2f-zHt" kind="presentation" id="luy-3g-Dpf"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UeB-bV-EGj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hv7-O6-1j6"/>
+                            <constraint firstItem="UeB-bV-EGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IPB-gn-dCh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UeB-bV-EGj" secondAttribute="bottom" constant="100" id="ghf-Kt-AdG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Countries" id="8nC-Rw-yNo"/>
                     <connections>
-                        <outlet property="collectionView" destination="a2o-vx-PIG" id="pLl-Tf-PXi"/>
+                        <outlet property="collectionView" destination="UeB-bV-EGj" id="WHZ-Uy-6Ls"/>
+                        <outlet property="largeFlageImage" destination="OJy-c2-HnH" id="RbF-mW-lLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
