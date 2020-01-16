@@ -11,9 +11,9 @@ import NetworkHelper
 
 struct CountryAPIClient {
     
-   static func getCountries(completion: @escaping (Result<[Country], AppError>)-> ()) {
+    static func getCountries(searchQuery: String, completion: @escaping (Result<[Country], AppError>)-> ()) {
         
-        let endpoint = "https://restcountries.eu/rest/v2/name/united"
+        let endpoint = "https://restcountries.eu/rest/v2/name/\(searchQuery)"
         
         guard let url = URL(string: endpoint) else {
             completion(.failure(.badURL(endpoint)))

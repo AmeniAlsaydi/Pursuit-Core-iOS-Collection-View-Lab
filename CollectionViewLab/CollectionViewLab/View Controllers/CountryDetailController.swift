@@ -21,7 +21,7 @@ class CountryDetailController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            getRate()
+            
             updateUI()
         }
     
@@ -54,6 +54,7 @@ class CountryDetailController: UIViewController {
             nameLabel.text = country.name
             capitalLabel.text = "Capital: \(country.capital)"
             populationLabel.text = "Population: \(country.population)"
+            getRate()
         
             
             imageView.getImage(with: "https://www.countryflags.io/\(country.alpha2Code)/flat/64.png") { [weak self] (result) in

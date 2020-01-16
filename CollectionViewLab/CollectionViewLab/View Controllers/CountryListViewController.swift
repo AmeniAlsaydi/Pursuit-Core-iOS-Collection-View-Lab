@@ -9,7 +9,8 @@
 import UIKit
 
 class CountryListViewController: UIViewController {
-
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var largeFlageImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var countryNameLabel: UILabel!
@@ -22,11 +23,28 @@ class CountryListViewController: UIViewController {
         }
     }
     
+    var searchQuery = "united" {
+        didSet {
+            CountryAPIClient.getCountries(searchQuery: searchQuery) { (result) in
+                switch result {
+                case .failure(let appError):
+                    print("appError: \(appError)")
+                case .success(let countries):
+                    DispatchQueue.main.async {
+                        self.countries = countries
+                    }
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        searchBar.delegate = self
         getCountries()
     }
     
@@ -40,7 +58,7 @@ class CountryListViewController: UIViewController {
     }
     
     private func getCountries() {
-        CountryAPIClient.getCountries { (result) in
+        CountryAPIClient.getCountries(searchQuery: searchQuery) { (result) in
             switch result {
             case .failure(let appError):
                 print("apperror: \(appError)")
@@ -113,6 +131,18 @@ extension CountryListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
+    
+}
+
+extension CountryListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+        searchQuery = "united"
+               return
+           }
+           searchQuery = searchText
+    }
+
     
 }
 
