@@ -35,7 +35,7 @@ class CountryListViewController: UIViewController {
         }
         
         detailVC.country = countries[indexPath.row]
-        //detailVC.exchange = exchanges
+        
     }
     
     private func getCountries() {

@@ -19,6 +19,7 @@
 		B7A88B6A23CF3CF600606436 /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */; };
 		B7A88B6C23D0038D00606436 /* CountryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6B23D0038D00606436 /* CountryDetailController.swift */; };
 		B7A88B6E23D01A5100606436 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6D23D01A5100606436 /* ExchangeRate.swift */; };
+		B7A88B7023D0203D00606436 /* RatesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A88B6F23D0203D00606436 /* RatesAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
 		B7A88B6B23D0038D00606436 /* CountryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailController.swift; sourceTree = "<group>"; };
 		B7A88B6D23D01A5100606436 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		B7A88B6F23D0203D00606436 /* RatesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				B7A88B5023CEBCE800606436 /* SceneDelegate.swift */,
 				B7A88B5223CEBCE800606436 /* CountryListViewController.swift */,
 				B7A88B6B23D0038D00606436 /* CountryDetailController.swift */,
+				B7A88B6F23D0203D00606436 /* RatesAPIClient.swift */,
 				B7A88B5423CEBCE800606436 /* Main.storyboard */,
 				B7A88B6423CF3AF900606436 /* Country.swift */,
 				B7A88B6923CF3CF600606436 /* CountryAPIClient.swift */,
@@ -164,6 +167,7 @@
 				B7A88B5323CEBCE800606436 /* CountryListViewController.swift in Sources */,
 				B7A88B6323CF3A1700606436 /* CountryCell.swift in Sources */,
 				B7A88B6A23CF3CF600606436 /* CountryAPIClient.swift in Sources */,
+				B7A88B7023D0203D00606436 /* RatesAPIClient.swift in Sources */,
 				B7A88B4F23CEBCE800606436 /* AppDelegate.swift in Sources */,
 				B7A88B6E23D01A5100606436 /* ExchangeRate.swift in Sources */,
 				B7A88B6523CF3AF900606436 /* Country.swift in Sources */,

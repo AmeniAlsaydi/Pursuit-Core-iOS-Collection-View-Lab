@@ -17,30 +17,50 @@ class CountryDetailController: UIViewController {
         @IBOutlet weak var exchangeLabel: UILabel!
         
         var country: Country?
-        //var exchange: ExchangeRate?
+//    var exchange: ExchangeRate? {
+//        didSet {
+//            updateUI()
+//        }
+//    }
         
         
         override func viewDidLoad() {
             super.viewDidLoad()
-
+            
+            getRate()
             updateUI()
         }
+    
+    func getRate() {
+        RatesAPIClient.getRates { (result) in
+            switch result {
+            case .failure(let appError):
+                print("error with exchange: \(appError)")
+            case .success(let rate):
+                
+                let exchangeRate = rate.rates[self.country?.currencies.first?.code ?? " "] ?? 0
+                let formatedRate = String(format: "%.0f", exchangeRate)
+                let currencyName = self.country?.currencies.first?.name ?? " "
+                
+                DispatchQueue.main.async {
+                    self.exchangeLabel.text = "1 US Dollar = \(formatedRate) \(currencyName)"
+                }
+                
+                
+            }
+        }
+    }
        
         func updateUI() {
-            // let theExchange = exchange
+            
              
-            guard let country = country  else {
-                fatalError("no country") }
+            guard let country = country else {
+                fatalError("no country or exchange") }
+            
             nameLabel.text = country.name
             capitalLabel.text = "Capital: \(country.capital)"
             populationLabel.text = "Population: \(country.population)"
-            
-//            let exchangeRate = theExchange.rates[country.currencies.first?.code ?? " "] ?? 0
-//            let formatedRate = String(format: "%.0f", exchangeRate)
-//            let currencyName = country.currencies.first?.name ?? " "
-//
-//            exchangeLabel.text = "1 US Dollar = \(formatedRate) \(currencyName)"
-            
+        
             
             imageView.getImage(with: "https://www.countryflags.io/\(country.alpha2Code)/flat/64.png") { [weak self] (result) in
                 switch result {
