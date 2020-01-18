@@ -51,7 +51,13 @@ class CountryListViewController: UIViewController {
         
         searchBar.delegate = self
         getCountries()
+        
+        print("index for visible items: \(collectionView.indexPathsForVisibleItems)")
+        
+        
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? CountryDetailController, let indexPath = collectionView.indexPathsForSelectedItems?.first else {
@@ -107,34 +113,34 @@ extension CountryListViewController: UICollectionViewDataSource {
         }
         
         countryNameLabel.text = country.name
-
-        
         
         return cell
     }
-    
-    
 }
+
 extension CountryListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // expecting a cg size which is a tuple of two values
-        
+
         let interItemSpacing: CGFloat = 5 // space betweem items
         let maxWidth = UIScreen.main.bounds.size.width // device width
-        
+
+        //print(maxWidth) // return 414
+
         let numberOfItems: CGFloat = 2 // items
         let totalSpacing: CGFloat = numberOfItems * interItemSpacing
-        
+
         let itemWidth: CGFloat = (maxWidth - totalSpacing)/numberOfItems
-        
-        return CGSize(width: itemWidth * 0.8 , height: itemWidth * 1.5)
-        
-        
+
+        return CGSize(width: itemWidth * 0.8, height: itemWidth * 1.3)
+
+
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         // padding sround collectionview
-        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

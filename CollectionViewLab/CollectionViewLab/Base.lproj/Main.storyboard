@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UeB-bV-EGj">
-                                <rect key="frame" x="0.0" y="532" width="414" height="230"/>
+                                <rect key="frame" x="0.0" y="512" width="414" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="FXa-Pe-FmS"/>
+                                    <constraint firstAttribute="height" constant="300" id="FXa-Pe-FmS"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="175-7S-0Z7">
                                     <size key="itemSize" width="224" height="234"/>
@@ -30,7 +30,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="countryCell" id="tgy-GN-DnY" customClass="CountryCell" customModule="CollectionViewLab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-2" width="224" height="234"/>
+                                        <rect key="frame" x="0.0" y="33" width="224" height="234"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hL6-eh-ccJ">
                                             <rect key="frame" x="0.0" y="0.0" width="224" height="234"/>
@@ -85,8 +85,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtY-1t-2qs">
-                                <rect key="frame" x="138" y="435" width="138" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtY-1t-2qs">
+                                <rect key="frame" x="0.0" y="435" width="414" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -110,12 +110,14 @@
                             <constraint firstItem="OJy-c2-HnH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3OS-FJ-Zgw"/>
                             <constraint firstItem="UeB-bV-EGj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hv7-O6-1j6"/>
                             <constraint firstItem="UeB-bV-EGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IPB-gn-dCh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VtY-1t-2qs" secondAttribute="trailing" id="UCX-Di-OJL"/>
                             <constraint firstItem="OJy-c2-HnH" firstAttribute="top" secondItem="0PA-rD-qwN" secondAttribute="bottom" constant="25" id="aOl-6q-ipw"/>
                             <constraint firstItem="0PA-rD-qwN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bmC-2d-sdR"/>
                             <constraint firstItem="VtY-1t-2qs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cNO-Js-zof"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UeB-bV-EGj" secondAttribute="bottom" constant="100" id="ghf-Kt-AdG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UeB-bV-EGj" secondAttribute="bottom" constant="50" id="ghf-Kt-AdG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OJy-c2-HnH" secondAttribute="trailing" constant="20" id="i08-Ig-rm1"/>
                             <constraint firstItem="VtY-1t-2qs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iXX-07-Rth"/>
+                            <constraint firstItem="VtY-1t-2qs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uLw-mv-YDu"/>
                             <constraint firstItem="0PA-rD-qwN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zXB-jD-VP7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

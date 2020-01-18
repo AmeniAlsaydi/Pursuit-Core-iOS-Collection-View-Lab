@@ -20,8 +20,8 @@ class CountryCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        layoutIfNeeded()
-        flagImageView.clipsToBounds = true
+        //layoutIfNeeded()
+        //flagImageView.clipsToBounds = true
         flagImageView.layer.cornerRadius = flagImageView.frame.height/2.9
 
     }
