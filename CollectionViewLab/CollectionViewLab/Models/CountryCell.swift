@@ -17,6 +17,14 @@ class CountryCell: UICollectionViewCell {
     @IBOutlet weak var capitalLabel: UILabel!
     @IBOutlet weak var populationLabel: UILabel!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        layoutIfNeeded()
+        flagImageView.clipsToBounds = true
+        flagImageView.layer.cornerRadius = flagImageView.frame.height/2.9
+
+    }
     
     func configureCell(country: Country) {
         

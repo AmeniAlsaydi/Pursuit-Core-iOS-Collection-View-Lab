@@ -38,8 +38,13 @@ class CountryListViewController: UIViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        largeFlageImage.clipsToBounds = true
+        largeFlageImage.layer.cornerRadius = largeFlageImage.frame.width/13
+
 
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -101,6 +106,10 @@ extension CountryListViewController: UICollectionViewDataSource {
             }
         }
         
+        countryNameLabel.text = country.name
+
+        
+        
         return cell
     }
     
@@ -141,6 +150,10 @@ extension CountryListViewController: UISearchBarDelegate {
                return
            }
            searchQuery = searchText
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 
     
